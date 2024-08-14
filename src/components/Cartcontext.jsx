@@ -1,4 +1,5 @@
 import React, { useState, createContext, useContext } from 'react'
+import "./Checkout.css"
 
 const CartContext = createContext();
 

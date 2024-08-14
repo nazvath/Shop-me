@@ -1,0 +1,35 @@
+.purchase-form table {
+    width: 100%;
+  }
+  .Check{
+    color: green;
+    margin: 10px;
+    
+  }
+  
+  .purchase-form td {
+
+    padding: 20px;
+  }
+  
+  .purchase-form input, .purchase-form select {
+    width: 100%;
+    padding: 8px;
+    font-size: 1em;
+  }
+  
+  .submit-order {
+    width: 10%;
+    padding: 10px;
+    background-color: #45b6d3;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+   margin-top: 20px;
+  }
+  
+  .submit-order:hover {
+    background-color: #338a9b;
+  }
+  

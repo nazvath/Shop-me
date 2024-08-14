@@ -7,6 +7,7 @@ import { CartProvider } from './components/Cartcontext';
 import Cart from './components/Cart'
 import Layout from './components/Layout';
 import { createBrowserRouter , RouterProvider } from 'react-router-dom';
+import Checkout from './components/Checkout';
 
 
 function App(){
@@ -30,7 +31,12 @@ children:[
   {
     path: "/cart",
     element: <Cart/>
+  },
+  {
+    path:"/checkout",
+    element:<Checkout/>
   }
+
 ]  
 }
 ]);

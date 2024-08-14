@@ -1,49 +1,38 @@
-.flex ul {
+.navbar {
+    background-color: #45b6d3;
+    padding: 10px;
     display: flex;
-    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
     flex-wrap: wrap;
-    padding: 0; /* Remove padding from the ul */
-    margin: 0;  /* Remove default margin from the ul */
-}
-
-.flex ul li {
-    display: flex;
-    align-items: center; /* Vertically align items */
-    padding: 10px 20px;/* Adjust padding to control height */ 
-    background-color: rgb(44, 171, 185);
-    font-size:1.5em;
-    font-weight: 200px;
-    list-style-type: none;
     
 }
 
-
-.flex {
-    background-color: rgb(44, 171, 185);
-    padding: 0px 0; /* Add padding only to the top and bottom of the navbar container */
-    display: flex;
-    justify-content: space-between; /* Space out items horizontally */
-    justify-content: center;
-}
-/* }
- .flex a li ul{
-    text-decoration: none;
-    color: white
-} */
-
-.flex ul li a {
-    color: white;            /* Set the text color of the links */
-    text-decoration: none;
-    font-size: .9em;   /* Remove the underline */
-}
-
-.flex ul li a:hover {
-    color: #FFD700;          /* Change color on hover (example: gold) */
-}
-.pacifico-regular{
+.pacifico-regular {
     font-family: "Pacifico", cursive;
     font-weight: 400;
-    font-style: normal;
+    font-size: 1.8em;
+    color: rgb(255, 255, 255);
+}
+
+.ml-auto{
+    display: flex;
+    gap: 20px;
+    margin-left: 600px;
+    font-size: larger;
+    margin-left: auto;
     
-   
-  }
+}
+
+.ml-auto a {
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+}
+
+.ml-auto a:hover {
+    color: #FFD700;
+}
+
+
+
