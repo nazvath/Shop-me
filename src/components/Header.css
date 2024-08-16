@@ -1,38 +1,44 @@
-.navbar {
-    background-color: #45b6d3;
-    padding: 10px;
+
+ .navbar {
+   
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    
-}
-
-.pacifico-regular {
+    background-color: #45b6d3;
+    padding: 10px;
+  }
+  
+  .pacifico-regular {
     font-family: "Pacifico", cursive;
     font-weight: 400;
-    font-size: 1.8em;
+    font-size: 1.5em;
     color: rgb(255, 255, 255);
-}
-
-.ml-auto{
-    display: flex;
+  }
+  
+  .navbar-nav {
     gap: 20px;
-    margin-left: 600px;
-    font-size: larger;
-    margin-left: auto;
-    
-}
-
-.ml-auto a {
+  }
+  
+  .navbar-nav a {
     color: white;
     text-decoration: none;
     font-size: 1em;
-}
-
-.ml-auto a:hover {
+    transition: color 0.3s ease;
+  }
+  
+  .navbar-nav a:hover {
     color: #FFD700;
-}
-
-
+  }
+  
+  @media (max-width: 991px) {
+    .navbar-nav {
+      gap: 10px;
+      margin-top: 10px;
+    }
+    
+    .pacifico-regular {
+      font-size: 1.2em;
+    }
+  }
 

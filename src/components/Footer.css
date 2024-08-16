@@ -1,0 +1,21 @@
+.Footer{
+    background-color: #45b6d3;
+    height: 90px;
+     color:white;
+        gap: 20px;
+        padding: 20px;
+}
+.icon{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.icon:hover{
+    color:yellow
+}
+p{
+    font-family:'Times New Roman', Times, serif;
+    display: flex;
+    justify-content: center;
+    margin: 10px
+}

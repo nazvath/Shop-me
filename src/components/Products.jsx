@@ -56,8 +56,6 @@ function Products() {
   show={notification.show}
   onClose={()=>setNotification({show: false , message: ''})}
   />
-
-
       <div className='category-buttons'>
         {categories.map(cat => (
           <button key={cat} onClick={() => handleCategoryChange(cat)}>
