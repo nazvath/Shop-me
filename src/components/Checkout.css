@@ -32,4 +32,14 @@
   .submit-order:hover {
     background-color: #338a9b;
   }
-  
+  @media (max-width: 768px) {
+    .purchase-form td {
+        padding: 10px;
+    }
+
+    .submit-order {
+        width: 30%;
+        padding: 12px;
+        margin-left: 165px;
+    }
+}

@@ -5,7 +5,7 @@ import Button from 'react-bootstrap/Button';
 import image2 from '../assets/image2.png'
 import image3 from '../assets/image3.jpg';
 import './Hero.css'
-import {useNavigate} from 'react-router-dom'
+import {useNavigate ,Link} from 'react-router-dom'
 import Footer from'./Footer'
 
 function Hero() {
@@ -17,6 +17,8 @@ function Hero() {
       .then(res => res.json())
       .then(data => setProduct(data.products.slice(4, 12))); // Adjust the number of products to display
   }, []);
+
+
 
   return (
     <div className='hero-container'>
@@ -50,12 +52,13 @@ function Hero() {
 <div className='product-list'>
         <h2 style={{display:'flex', justifyContent:'center', color:'green', fontFamily:'monospacegit init'}}>FLASH SALE!</h2>
         <div className='products-container'>
-          {product.map(item => (
+          {product.map(item => ( <Link to='/products' className='product-link'>
             <div key={item.id} className='product-item'>
               <img src={item.thumbnail} alt={product.title} />
               <h3>{item.title}</h3>
               <p>${item.price}</p>
             </div>
+            </Link>
           ))}
         </div>
         </div>

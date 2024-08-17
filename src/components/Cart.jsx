@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import {useCart } from './Cartcontext'
-import { Link } from 'react-router-dom';
+import { Link , useNavigate} from 'react-router-dom';
 
 import './Cart.css'
 
 function Cart() {
     const {cart, updateQuantity, removeFromCart}= useCart();
     const [show, setShow ]=useState(false)
+   
 
 const calculateTotalPrice= ()=>{
   return cart.reduce((total,product)=> total+ product.price * product.quantity, 0).toFixed(2)
@@ -37,8 +38,8 @@ const handleShow = () => setShow(true);
         ))}
        </ul>
        <h3 className='cart-total'>Total ${calculateTotalPrice()}</h3>
-       <Link to="/checkout">
-       <button className='buy-now-button'>Buy Now</button>
+      <Link to='/checkout'>
+       <button className='buy-now-button' >Buy Now</button>
        </Link>
        
 

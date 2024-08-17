@@ -66,6 +66,7 @@
     flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
+
 }
 
 .product-item {
@@ -102,7 +103,10 @@
     transform: scale(1.05);
     
 }
-
+.product-link{
+    text-decoration: none;
+    color: inherit
+}
 
 /* Responsive Adjustments */
 @media (max-width: 1024px) {
