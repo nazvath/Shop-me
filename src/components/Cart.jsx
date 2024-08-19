@@ -1,25 +1,36 @@
 import React, { useState } from 'react';
 import {useCart } from './Cartcontext'
-import { Link , useNavigate} from 'react-router-dom';
+import {  useNavigate} from 'react-router-dom';
 
 import './Cart.css'
 
 function Cart() {
     const {cart, updateQuantity, removeFromCart}= useCart();
-    const [show, setShow ]=useState(false)
+    const [showAlert, setShowAlert ]=useState(false);
+    const navigate = useNavigate();
    
 
 const calculateTotalPrice= ()=>{
   return cart.reduce((total,product)=> total+ product.price * product.quantity, 0).toFixed(2)
 };
 
-const handleClose = () => setShow(false);
-const handleShow = () => setShow(true);
+
+const handleBuyNow = () => {
+  if (cart.length === 0) {
+    setShowAlert(true);
+    alert('your cart is empty')
+  } else {
+    setShowAlert(false); 
+ 
+    navigate('/checkout'); 
+  }
+};
+
 
   return (
     <div className='cart'>
       <h2 style={{textAlign:'center' ,color:'green', fontFamily:'initial', margin: '3%'}}>Your Cart</h2>
-        
+
        <ul>
         {cart.map((product, index)=>(
 <li key={index} className='cart-item'>
@@ -38,9 +49,9 @@ const handleShow = () => setShow(true);
         ))}
        </ul>
        <h3 className='cart-total'>Total ${calculateTotalPrice()}</h3>
-      <Link to='/checkout'>
-       <button className='buy-now-button' >Buy Now</button>
-       </Link>
+    
+       <button className='buy-now-button'onClick={handleBuyNow} >Buy Now</button>
+     
        
 
        </div>
